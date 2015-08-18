@@ -23,8 +23,9 @@ COPY start-server.sh /start-server
 VOLUME ["/data"]
 COPY server.properties /tmp/server.properties
 WORKDIR /data
+RUN ["chown", "-R", "minecraft:minecraft", "."]
 
-CMD [ "/install" ]
+CMD ["/bin/bash","-c","chmod +x /install"]
 
 ENV UID=1000
 ENV MOTD Have fun :)
