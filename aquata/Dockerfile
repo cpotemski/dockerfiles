@@ -2,7 +2,6 @@ FROM node:4.4.3
 
 RUN mkdir -p /usr/src/app
 
-VOLUME ["/usr/src/app"]
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
